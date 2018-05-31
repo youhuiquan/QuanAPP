@@ -84,6 +84,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Common\Readme.txt" />
     <Content Include="Content\images\anchor.png" />
     <Content Include="Content\images\bg.jpeg" />
     <Content Include="Content\images\da.png" />
@@ -375,7 +376,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="AutoTask\TestTask.cs" />
+    <Compile Include="Common\Cryptography.cs" />
+    <Compile Include="Common\Sample.cs" />
+    <Compile Include="Common\WXBizMsgCrypt.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Filters\AutoTaskAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

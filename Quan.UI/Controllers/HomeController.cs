@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Quan.UI.EF;
+using Quan.UI.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -13,6 +15,19 @@ namespace Quan.UI.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            QuanDbContext db = new QuanDbContext();
+
+            User a = new User();
+            a.Jifen = 100;
+            a.UserName = "admin";
+            a.WID = "wid";
+
+            db.Users.Add(a);
+
+            db.SaveChanges();
+
+           
+
             if (!string.IsNullOrEmpty(Request["echoStr"]))
             {
                 var echostr = Request["echoStr"];
